@@ -4,7 +4,6 @@ Return x if the array is special, otherwise, return -1. It can be proven that if
 
 class Solution {
     public int specialArray(int[] nums) {
-        Arrays.sort(nums);
         int n = nums.length; 
         for(int i=0;i<=n;i++){
             int c = 0;
