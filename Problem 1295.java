@@ -2,6 +2,7 @@
 
  //Method 1 - count by conventional while loop method
 //Method 2 - use Math.log to count number of digits
+//Method 3 - converrt to string and find length of string
 
 class Solution {
     public int findNumbers(int[] nums) {
@@ -28,3 +29,22 @@ class Solution {
         else return false;
     }
 }
+
+
+//Method - 3
+/* class Solution {
+    public int findNumbers(int[] nums) {
+        int c=0;
+        for(int i=0;i<nums.length;i++){
+            String a = Integer.toString(nums[i]);
+            int l =  a.length();
+            if(even(l))
+            c++;
+        }
+        return c;
+    }
+    static boolean even(int n){
+        if(n%2==0) return true;
+        else return false;
+    }
+}  */
