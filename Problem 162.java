@@ -8,7 +8,7 @@ You must write an algorithm that runs in O(log n) time. */
 
 //same as Problem 852
 
-lass Solution {
+class Solution {
     public int findPeakElement(int[] arr) {
         
         int start = 0, end=arr.length-1;
