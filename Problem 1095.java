@@ -22,25 +22,7 @@ MountainArray.length() returns the length of the array. */
  * }
  */
  
-class Solution {
-    public int findInMountainArray(int target, MountainArray mountainArr) {
-        int peak = findPeakElement(mountainArr);
-        int ans = orderAgnostic (mountainArr, target,true,0,peak);
-        if(ans == -1)
-        ans = orderAgnostic (mountainArr, target,false,peak,MountainArray.length()-1);
-        return ans;
-    }
-
-
-    public int findPeakElement(MountainArray arr) {
-        
-        int start = 0, end= MountainArray.length()-1;
-        int ans = binarySearch(arr,start,end);
-        return ans;
-    }
-
-     i…
-[11:50 pm, 30/5/2024] Anshika: /**
+/**
  * // This is MountainArray's API interface.
  * // You should not implement it, or speculate about its implementation
  * interface MountainArray {
@@ -53,9 +35,13 @@ class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int peak = findPeakElement(mountainArr);
         int ans = orderAgnostic (mountainArr, target,true,0,peak);
-        if(ans == -1)
-        ans = orderAgnostic (mountainArr, target,true,peak,mountainArr.length()-1);
+        if(ans != -1){
+            return ans;
+        }
+        else{
+        ans = orderAgnostic (mountainArr, target,false,peak,mountainArr.length()-1);
         return ans;
+        }
     }
 
 
@@ -68,6 +54,7 @@ class Solution {
 
      int binarySearch(MountainArray arr, int start, int end) {
         while(start != end) {
+
             int mid = start + (end - start) / 2;
 
             if (arr.get(mid) < arr.get(mid+1)) {
@@ -82,19 +69,20 @@ class Solution {
     int orderAgnostic (MountainArray arr, int target,boolean isAsc,int start,int end){
     while(start <= end) {
             int mid = start + (end - start) / 2;
+            int midval=arr.get(mid);
 
-            if (arr.get(mid) == target) {
+            if (midval == target) {
                 return mid;
             }
 
             if (isAsc) {
-                if (target < arr.get(mid)) {
+                if (target < midval) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
                 }
             } else {
-                if (target > arr.get(mid)) {
+                if (target > midval) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
