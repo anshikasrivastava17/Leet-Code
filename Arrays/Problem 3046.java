@@ -4,7 +4,6 @@ nums1 should contain distinct elements.
 nums2 should also contain distinct elements.
 Return true if it is possible to split the array, and false otherwise. */
 
-
 //logic used - array can be split into 2 arrasys of distinct elements only if every element has frequency of 2, so that it can be placed in different arrays. 
 // But if freq > 2 then we cannot place in different arrays such that every array has distinct elements 
 class Solution {
