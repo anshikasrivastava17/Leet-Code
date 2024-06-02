@@ -2,7 +2,6 @@
 Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters. */
 
 //Check ceiling poblem under java programs repo
-
 class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
         if(target >= letters[letters.length - 1]) //target >= greatest element in array
