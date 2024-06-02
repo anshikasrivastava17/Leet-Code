@@ -24,7 +24,6 @@ class Solution {
                 arr[j] = -1;                   //mark all those counted as -1 for eg. [2,2,2,3,3] count 1st 2 and update c=3 then for remaining 2's mark it as -1.
             }
         }
-        
         return maxLucky;
     }
 }
