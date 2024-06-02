@@ -2,7 +2,6 @@
 If target is not found in the array, return [-1, -1].
 You must write an algorithm with O(log n) runtime complexity. */
 
-
 //given below is with O(n) complexity
 /* class Solution {
     public int[] searchRange(int[] arr, int target) {
