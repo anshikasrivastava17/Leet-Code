@@ -18,7 +18,7 @@ int start = 0, end = s.length() - 1;
     }
     
     /* Check is s[i...j] is palindrome. */
-    private boolean isPalindrome(String s, int i, int j) {
+    private boolean isPalindrome(String s, int start, int end) {
         
         while (start < end) {
             if (s.charAt(start) != s.charAt(end)) {
