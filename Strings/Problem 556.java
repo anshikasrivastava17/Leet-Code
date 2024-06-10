@@ -26,7 +26,6 @@ class Solution {
 
         return (num_ans > Integer.MAX_VALUE) ? -1 : (int)num_ans;
     }
-
     void swap(char[] arr,int i,int j)
     {
         char temp = arr[j];
