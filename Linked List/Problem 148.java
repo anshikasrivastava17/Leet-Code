@@ -13,7 +13,7 @@ class Solution {
         if (head == null || head.next == null) 
             return head;
         
-
+// using merge sort
         ListNode mid = getMid(head);
         ListNode left = sortList(head);
         ListNode right = sortList(mid);
