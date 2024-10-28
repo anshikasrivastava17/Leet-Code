@@ -10,7 +10,7 @@ class Solution {
                 // Check row
                 if (board[i][j] != '.') {
                     int num = board[i][j] - '1';
-                    if (rowCheck[num]) return false;
+                    if (rowCheck[num]) return false;  //already true, duplicate found so false
                     rowCheck[num] = true;
                 }
 
